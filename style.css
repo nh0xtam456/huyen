@@ -1,0 +1,36 @@
+body {
+    position:relative;
+    font-size: 30px;
+}
+
+input {
+    width:20px;
+    height:20px;
+}
+.Total {
+    border: 5px;
+    position: absolute;
+    top: 300px;
+    left:5px
+}
+#question2 {
+    display:none
+}
+#question3 {
+    display:none
+}
+#question4 {
+    display:none
+}
+
+.display
+{
+    display:none
+}
+
+.myanswer{
+    display:none;
+}
+.myanswer1{
+    display:none;
+}

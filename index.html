@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Document</title>
+</head>
+<body>
+    <div class="Total">
+        <form action="function.php"method="POST" id="question1" >
+            <table  border="1px" onclick="myFunction1()" id="ghetanh" >
+                <td>Ngày hôm nay em bị bỏng và anh làm lơ và lựa chọn của em là:</td>
+                <td><input type="checkbox" id="myCheck1"/>Làm lơ anh luôn</td>
+                <td><input type="checkbox" id="myCheck2" value="1"/>Chửi anh</td>
+                <td><input type="checkbox" id="myCheck3"/>Tha thứ cho anh</td>
+            </table>
+        </form>
+        <form action="function.php" method="POST" id="question2" border="1px">
+            <table  border="1px" onclick="myFunction2()" id="ghetanh1">
+            <tr><td>Em chưa ăn gì và anh làm lơ, lựa chọn của em là </td>
+                <td><input type="checkbox" id="myCheck4" >Làm lơ anh luôn</td>
+                <td><input type="checkbox" id="myCheck5" >Tha thứ cho anh</td>
+                <td><input type="checkbox" id="myCheck6" >Chửi anh</td>
+            </tr>
+            </table>
+        </form>
+        <form action="function.php" method="POST" id="question3" border="1px">
+            <table  border="1px" onclick="myFunction3()" id="ghetanh2">
+            <tr> <td>Ngày hôm nay của em tệ,anh làm lơ đi uống cafe và lựa chọn của em là:</td>
+                <td><input type="checkbox" id="myCheck7" >Làm lơ anh luôn</td>
+                <td><input type="checkbox" id="myCheck8" >Chửi anh</td>
+                <td><input type="checkbox" id="myCheck9" >Tha thứ cho anh</td>
+            </tr>
+            </table>
+        </form>
+        <form action="function.php" method="POST" id="question4" border="1px">
+            <table  border="1px" onclick="myFunction4()" id="ghetanh3">
+            <tr>
+                <td>Anh tới gặp em và lựa chọn của em là:</td>
+                <td><input type="checkbox" id="myCheck10" >Hỏi anh ăn cơm chưa</td>
+                <td><input type="checkbox" id="myCheck11" >Hôm nay đi làm như nào</td>
+                <td><input type="checkbox" id="myCheck12" >Tha thứ cho anh</td>
+                <td><input type="checkbox" id="myCheck13" >Tiếp tục yêu nhau</td>
+            </tr>
+            </table>
+        </form>
+        <div class="myanswer">
+            <h1>Cảm ơn em</h1>
+        </div>
+        <div class="myanswer1">
+            <h1>Gặp được em trong đời là diễm phúc đối với anh</h1>
+        </div>
+    </div>
+</body>
+<script>
+    function myFunction1() {
+        $("#myCheck3").attr('checked',true)
+        $("#myCheck1").attr('checked',false)
+        $("#myCheck1").attr('checked',false)
+        setTimeout(()=>{
+            $("#ghetanh").fadeOut()
+        $("#question2").fadeIn()
+        },2000)
+
+    }
+    function myFunction2() {
+        $("#myCheck5").attr('checked',true)
+        $("#myCheck4").attr('checked',false)
+        $("#myCheck6").attr('checked',false)
+        setTimeout(()=>{
+            $("#ghetanh1").fadeOut()
+        $("#question3").fadeIn()
+        },2000)
+
+    }
+    function myFunction3() {
+        $("#myCheck9").attr('checked',true)
+        $("#myCheck7").attr('checked',false)
+        $("#myCheck8").attr('checked',false)
+        setTimeout(()=>{
+            $("#ghetanh2").fadeOut()
+        $("#question4").fadeIn()
+        },2000)
+
+    }
+    function myFunction4() {
+        $("#myCheck10").attr('checked',true)
+        $("#myCheck11").attr('checked',true)
+        $("#myCheck12").attr('checked',true)
+        $("#myCheck13").attr('checked',true)
+        $("#myCheck14").attr('checked',true)
+        setTimeout(()=>{
+            $(".myanswer").fadeIn()
+        },2000)
+        setTimeout(()=>{
+            $(".myanswer1").fadeIn()
+        },2000)
+
+    }
+    
+</script>
+<script
+  src="https://code.jquery.com/jquery-2.2.4.js"
+  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+  crossorigin="anonymous"></script>
+</html>
